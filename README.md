@@ -1,7 +1,9 @@
 devstack
 ========
 
-Just a starting point for development projects
+Just a starting point for development projects. 
+
+must have node, compass, bower installed to get the most out of this.  
 
 - run ```sudo npm install``` to install dependancies
 
