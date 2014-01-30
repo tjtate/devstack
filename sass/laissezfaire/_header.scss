@@ -1,0 +1,332 @@
+html {
+	background:lighten($navyblue-color, 5%);	
+}
+
+body {
+	@include single-box-shadow(#000, 0, 0, 20px);
+	background:$white-color;
+	margin-top:62px;
+	width:100%;
+	position:relative;
+	&.moved {
+		transition: $transition-time;
+		-webkit-transition: $transition-time;
+		left:-250px;
+		position:absolute;
+		width:100%;
+	}
+}
+.header {
+	position:fixed;
+	z-index:1000;
+	top:0px;
+	width:100%;
+	background:$navyblue-color;	
+	border-bottom:1px solid lighten($navyblue-color, 10%);
+	a {
+		color:$white-color;
+		@include lffont("GothamMedium");
+	}
+	.site-nav-holder {
+		position:absolute;
+		right:-250px;
+		top:8px;
+		width:250px;
+		overflow-y: scroll;
+	}
+
+
+	.inline-list {
+		margin-bottom:0px;
+		margin-left:0px;
+			
+		li { 
+			display:list-item;
+			float:left;	
+			width:100%;
+			padding:0px;
+			margin:0px;
+			&:hover {
+				ul.sub-menu li {
+					display:list-item;
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+				}
+			}
+			a {
+				padding:$column-gutter/2 $column-gutter;
+				border-bottom:1px solid #2f486a;
+				&:hover {
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+					background:#2f486a;
+					
+				}
+			}
+			ul.sub-menu {
+				margin-left:0px;
+				list-style: none;
+				li {
+					
+					a {
+						@include lffont("UtopiaReg", emCalc(14px), none);
+						padding:$column-gutter/2 $column-gutter*2;
+						
+						float:left;
+						width:100%;
+					}
+				}
+			}
+		}
+	}
+	.site-logo {
+		float:left;
+		height:62px;
+		padding:22px 15px;
+		background: url(../images/logo.png) no-repeat 15px 18px;
+		width:200px;
+		text-indent: -9999em;
+		a {
+			margin-bottom:0px;
+			float: left;
+			width: 100%;
+			height: 30px;
+		}
+	}
+
+	.site-main-nav {
+		float:left;
+		width:100%;
+	}
+
+	.mobile-menu {
+		float:right;
+		padding:22px 15px;
+	}
+	.cart-icon-holder {
+		position:relative;
+		.cart-count {
+			position: absolute;
+			background: #c32a15;
+			height: 20px;
+			top: 12px;
+			left: 78px;
+			width: 20px;
+			text-align: center;
+			vertical-align: middle;
+			padding: 2px 0px;
+			font-size: 11px;
+			border-radius: 15px;
+		}
+	}
+	.search-icon-holder {
+		display:none;
+	}
+	.icon-cart {
+		text-indent:0px;
+		background:none;
+		margin:0px;
+	}
+
+
+	.search-form {
+		padding:$column-gutter/2;
+		margin-bottom:0px;
+		.site-search-input {
+			width: 185px;
+			float: left;
+		}
+		.icon.icon-search {
+			width: 35px;
+			height: 32px;
+			border: none;
+			background-position: 8px 6px;
+			background-color: #000;
+		}
+	}
+}
+
+.header-title {
+	padding:$column-gutter 0;
+	background:url(../images/home-hero-bg.png) $darkgreyblue-color;
+	&.small {
+		padding:$column-gutter/2 0;
+	}
+	&.single {
+		background:none;
+		background-color:$white-color;
+		h1 {
+			color:$black-color;
+		}
+		.breadcrumbs {
+			color:$black-color;
+		}
+	}
+	.breadcrumbs {
+		color:$white-color;
+		@include lffont("GothamLight", emCalc(12px));
+		&.small {
+			margin-bottom:0px;
+		}
+	}
+	h1 {
+		margin:0px;
+		@include lffont("GothamLight", emCalc(32px), none);
+		letter-spacing: -2px;
+		word-spacing: 5px;
+		color:$white-color;
+	}
+	.wp-post-image {
+		float:left;
+		margin-right:$column-gutter;
+	}
+}
+.single-post .header-title {
+	border-bottom:none;
+}
+
+@media #{$small} {
+
+}
+
+@media #{$medium} {
+	html {
+		background:$white-color;	
+	}
+	body {
+		@include single-box-shadow(#000, 0, 0, 0);
+	}
+	.header {
+	  	.site-main-nav {
+			float:left;
+			width:auto !important;
+			display:block;
+		}
+
+		.site-right-nav {
+			float:right;
+			display:block;
+		}
+
+		.site-logo {
+			border-right:1px solid #2f486a;
+		}
+
+	  	.mobile-menu {
+	  		display: none;
+	  	}
+
+	  	.site-nav-holder {
+			position:inherit !important;
+			width:auto !important;
+			top:0px !important;
+			right:auto !important;
+			overflow-y: visible !important;
+		}
+		.search-icon-holder {
+			display:block !important;
+		}
+		.cart-count {
+			top: 10px !important;
+			left: 45px !important;
+		}
+	  	.inline-list {
+			
+			li { 
+				width:auto !important;
+				a {
+					padding:20px 15px;
+					border-right:1px solid #2f486a;
+					border-bottom:none;
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+				}
+				&:hover {
+					
+					ul.sub-menu {
+						transition: $transition-time;
+						-webkit-transition: $transition-time;
+						visibility: visible;
+						margin-top:0px;
+						opacity:1;
+					}
+					
+				}
+				&:active {
+					ul.sub-menu {
+						-webkit-transition: opacity 1s ease-out;
+					}
+				}
+			  	ul.sub-menu {
+					display:block;
+					margin-left: 0px !important;
+					max-width:250px;
+					margin-top:50px;
+					padding-top:20px;
+					position: absolute;
+					z-index: 1;
+					visibility: hidden;
+					opacity:0;
+					
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+					&:after {
+					   content:"";
+					   display:block; /* reduce the damage in FF3.0 */
+					   top:5px;
+					   position:absolute;
+					   width:0;
+					   margin-left:30px;
+					   border-width:0 15px 15px;
+					   border-style:solid;
+					   border-color:$navyblue-color transparent; 
+					}
+					li {
+						float:left;
+						@include single-box-shadow(#5e5e5e, 0, 0, 5px);
+						width:100% !important;
+						background:$navyblue-color;
+						margin:0;
+						list-style:none;
+						display:list-item !important;
+						border-bottom:1px solid lighten($navyblue-color, 10%);
+						border-right:none;
+						&:last-child {
+							border-bottom:none;
+						}
+						a {
+							@include lffont("GothamMedium", emCalc(13px));
+							padding:$column-gutter/2;
+							width:100%;
+							float:left;
+							border-right:none;
+						}
+					}
+				}	
+			}
+		}
+	}
+	.header-title {
+		border-bottom:$border-style !important;
+		h1 {
+			font-size:$h1-font-size;
+		}
+	}
+}
+
+//background images for retina
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-moz-device-pixel-ratio: 2) {
+	.site-logo {
+		
+		background:url(../images/logo-2x.png) no-repeat 15px 18px !important;	
+		background-size:170px !important;
+	}
+	.header-title {
+		background:url(../images/home-hero-bg-2x.png) $darkgreyblue-color !important;
+		background-size:43px !important;
+		&.single {
+			background:none !important;
+		}
+	}
+}

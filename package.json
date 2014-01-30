@@ -1,0 +1,27 @@
+{
+  "name": "laissezfaire",
+  "version": "1.0.0",
+  "description": "laissez faire wordpress templates",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "load-grunt-tasks": "~0.2.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-git": "~0.1.6",
+    "grunt-modernizr": "~0.3.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": "",
+  "author": "TJ Tate",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}

@@ -1,0 +1,73 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+
+
+//set the theme settings first so foundation can use them
+@import "laissezfaire/settings";
+
+@import "foundation/global"; // *always required
+
+@import "foundation/grid";
+
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+@import "foundation/grid-5";
+
+//put woocommerce overrides first
+@import "laissezfaire/woocommerce";
+
+@import "foundation/visibility";
+@import "foundation/block-grid";
+@import "foundation/type";
+@import "foundation/buttons";
+@import "foundation/forms"; // *requires components/buttons
+// @import "foundation/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/button-groups"; // *requires components/buttons
+// @import "foundation/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/split-buttons"; // *requires components/buttons
+// @import "foundation/flex-video";
+// @import "foundation/labels";
+@import "foundation/inline-lists";
+//@import "foundation/panels";
+// @import "foundation/pricing-tables";
+@import "foundation/tables";
+
+// @import "foundation/section";
+// @import "foundation/top-bar";  // *requires components/grid
+// @import "foundation/orbit";
+// @import "foundation/reveal";
+// @import "foundation/joyride";
+// @import "foundation/clearing";
+// @import "foundation/alert-boxes";
+// @import "foundation/breadcrumbs";
+// @import "foundation/keystrokes";
+// @import "foundation/pagination";
+// @import "foundation/progress-bars";
+// @import "foundation/side-nav";
+// @import "foundation/sub-nav";
+// @import "foundation/switch";
+// @import "foundation/magellan";
+// @import "foundation/thumbs";
+// @import "foundation/tooltips";
+// @import "foundation/dropdown";
+
+@import "laissezfaire/sprites";
+@import "laissezfaire/dashicons";
+@import "laissezfaire/header";
+@import "laissezfaire/wysiwyg";
+@import "laissezfaire/body";
+@import "laissezfaire/tabbed-nav";
+@import "laissezfaire/content-blocks";
+@import "laissezfaire/single-articles";
+@import "laissezfaire/single-products";
+@import "laissezfaire/club";
+@import "laissezfaire/sidebar";
+@import "laissezfaire/footer";
+@import "laissezfaire/accordion";
+@import "laissezfaire/modal";
+@import "laissezfaire/subscrib-table";

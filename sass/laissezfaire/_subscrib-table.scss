@@ -1,0 +1,78 @@
+.subscription-table {
+	margin:$column-gutter 0 $column-gutter*2 0;
+	table {
+		position:relative;
+		z-index:1;
+		tr, th {
+			td {
+				z-index:1;
+				position:relative;
+				width:25%;
+				border-bottom:$border-style-light;
+				background:$white-color;
+				border-right:$border-style-light;
+				transition: $transition-time;
+				-webkit-transition: $transition-time;
+				text-align:center;
+				&.title {
+					@include lffont("GothamBook", emCalc(24px), none);
+				}
+				&:first-child {
+					-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+					-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+					box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+					z-index:2;
+					text-align:left;
+				}
+				&:nth-child(4) {
+					-webkit-box-shadow: -5px 5px 5px 0 rgba(0,0,0,0.1);
+					box-shadow: -5px 5px 5px 0 rgba(0,0,0,0.1);
+					z-index:2;
+					background:$highlight-color;
+					border-right:none;
+				}
+				span {
+					display: inline-block;
+				}
+			}
+		}
+		tr {
+			&:hover {
+				td {
+					background:lighten($lighthighlight-color, 10%);
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+				}
+			}
+			&:first-child {
+				td {
+					background:$lighthighlight-color;
+					&:first-child {
+						background:$white-color;
+						color:$grey-color;
+						vertical-align: bottom;
+						font-family: "GothamMedium", "Helvetica", Helvetica, Arial, sans-serif;
+						text-transform: uppercase;
+						font-size: 0.875em;
+					}
+					&:last-child {
+						background:$highlight-color;
+					}
+				}
+			}
+			&:last-child {
+				td {
+					text-align:center;
+					background:$navyblue-color;
+					&:first-child {
+						background:$white-color;
+					}
+					a {
+						color:$white-color;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+}

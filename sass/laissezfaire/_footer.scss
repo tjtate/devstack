@@ -1,0 +1,31 @@
+.footer {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 5px;
+	background: #fff;
+	border-top: 1px solid #e1e1e1;
+	z-index:1001;
+	margin: 0 auto;
+	display:none;
+	p {
+		@include lffont("GothamBook", emCalc(10px), none);
+		margin-bottom:0px;
+		color:lighten($grey-color, 30%);
+	}
+	.right-links {
+		float:right;
+		a.button {
+			margin-bottom:0px;
+		}
+	}
+}
+
+@media #{$medium} {
+	.footer {
+		display: block;
+	}
+}

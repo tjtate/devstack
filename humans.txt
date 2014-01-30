@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    TJ Tate -- Front End Web Developer/Designer -- @thomasjohntate
+
+# THANKS
+    Godzilla
+
+# TECHNOLOGY COLOPHON

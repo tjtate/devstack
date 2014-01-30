@@ -1,0 +1,43 @@
+.accordion {
+	float:left;
+	width:100%;
+	border:$border-style-light;
+	margin-bottom:$column-gutter/2;
+	transition: $transition-time;
+	-webkit-transition: $transition-time;
+	
+	.question-title {
+		float:left;
+		width:100%;
+		border-left:7px solid #e1e1e1;
+		padding:$column-gutter/2 $column-gutter;
+		transition: $transition-time;
+		-webkit-transition: $transition-time;
+		&:hover {
+			background:$lightgreyblue-color;
+			transition: $transition-time;
+			-webkit-transition: $transition-time;
+		}
+		&.selected {
+			transition: $transition-time;
+			-webkit-transition: $transition-time;
+			border-left:7px solid $navyblue-color;
+		}
+		h4 {
+			margin:0;
+			float:left;
+			width:100%;
+			a {
+				float:left;
+				width:100%;
+			}
+		}
+	}
+	.question-answer {
+		float:left;
+		width:100%;
+		padding:$column-gutter/2 $column-gutter;
+		display:none;
+		border-top:$border-style-light;
+	}
+}

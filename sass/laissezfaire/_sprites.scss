@@ -1,0 +1,128 @@
+.icon {
+    background: url(../images/site-sprite.png) no-repeat;
+    display: block;
+    text-indent: -9999em;
+    margin:0 10px;
+}
+
+.icon-search {
+    background-position:0 0;
+    width: 20px;
+}
+
+.icon-key {
+    background-position:-27px -2px;
+    width: 24px;
+    margin:0;
+    padding-bottom: 1px;
+}
+
+.icon-check {
+    background-position: -88px 1px;
+    width: 34px;
+    height: 22px;
+    margin: 0;
+    padding-bottom: 1px;
+}
+
+.icon-account {
+    background-position: -117px 40px;
+    margin:0px;
+    text-indent: 0px;
+}
+
+.icon-club {
+    background-position: -149px 40px;
+    margin:0px;
+    text-indent: 0px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-moz-device-pixel-ratio: 2) {
+    .icon {
+        background: url(../images/site-sprite-2x.png) no-repeat;
+        background-size: 177px auto;
+        display: block;
+        text-indent: -9999em;
+        margin:0 10px;
+    }
+    .icon-search {
+        background-position:0 0;
+        width: 20px;
+    }
+    .icon-cart {
+        background-position:-56px 0;
+        width: 24px;
+    }
+    .icon-key {
+        background-position:-27px -2px;
+        width: 24px;
+        margin:0;
+        padding-bottom: 1px;
+    }
+    .icon-check {
+        background-position: -88px 1px;
+        width: 34px;
+        height: 22px;
+        margin: 0;
+        padding-bottom: 1px;
+    }
+    .icon-account {
+        background-position: -117px 1px;
+        width: 34px;
+        height: 22px;
+        margin: 0;
+        padding-bottom: 1px;
+    }
+
+    .icon-club {
+        background-position: -149px 1px;
+        width: 34px;
+        height: 22px;
+        margin: 0;
+        padding-bottom: 1px;
+    }
+}
+
+@media #{$medium} {
+    .icon-account {
+        background-position: -117px 1px;
+        width: 34px;
+        height: 22px;
+        margin: 0;
+        padding-bottom: 1px;
+        text-indent: -9999em;
+    }
+
+    .icon-club {
+        background-position: -149px 1px;
+        width: 34px;
+        height: 22px;
+        margin: 0;
+        padding-bottom: 1px;
+        text-indent: -9999em;
+    }
+
+    .icon-cart {
+        width: 24px !important;
+        background: url(../images/site-sprite.png) -56px 0 no-repeat !important;
+        display: block !important;
+        text-indent: -9999em !important;
+        margin:0 10px !important;
+    }
+}
+
+@media #{$medium-large} {
+    .icon-account {
+        width:auto !important;
+        text-indent: 0px;
+        background:none;
+        margin:0px;
+    }
+    .icon-club {
+        width:auto !important;
+        text-indent: 0px;
+        background:none;
+        margin:0px;
+    }
+}

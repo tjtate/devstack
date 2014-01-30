@@ -1,0 +1,177 @@
+ @import "compass/css3/box-shadow";
+
+// We use these as default colors throughout
+$white-color:#ffffff !default;
+$black-color:#000000 !default;
+$grey-color:#6f6f6f !default;
+$red-color:#c32a15 !default;
+$green-color: darken(#8ead20, 10%) !default;
+$highlight-color:#ffc247 !default;
+$lighthighlight-color:#ffe6b5 !default;
+$navyblue-color: #1d324f !default;
+$navyblue-color-light: lighten($navyblue-color, 10%);
+$lightgreyblue-color: #edf2f3 !default;
+$darkgreyblue-color: #a4b0b3 !default;
+$darkergreyblue-color: #8a8a8a !default;
+$lightblue-color: #5e8bc9 !default;
+
+//css animation time
+$transition-time: all .2s ease-in-out;
+$transition-time-long: all .6s ease-in-out;
+//border
+$border-style: 1px solid $darkgreyblue-color !default;
+$border-style-light: 1px solid lighten($grey-color, 50%) !default;
+
+//Fonts
+@font-face {
+    font-family: 'GothamBold';
+    src: url('fonts/gotham-bold.eot');
+    src: url('fonts/gotham-bold.eot') format('embedded-opentype'),
+         url('fonts/gotham-bold.woff') format('woff'),
+         url('fonts/gotham-bold.ttf') format('truetype'),
+         url('fonts/gotham-bold.svg#GothamBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('fonts/gotham-medium.eot');
+    src: url('fonts/gotham-medium.eot') format('embedded-opentype'),
+         url('fonts/gotham-medium.woff') format('woff'),
+         url('fonts/gotham-medium.ttf') format('truetype'),
+         url('fonts/gotham-medium.svg#GothamMedium') format('svg');
+}
+@font-face {
+    font-family: 'GothamBook';
+    src: url('fonts/gotham-book.eot');
+    src: url('fonts/gotham-book.eot') format('embedded-opentype'),
+         url('fonts/gotham-book.woff') format('woff'),
+         url('fonts/gotham-book.ttf') format('truetype'),
+         url('fonts/gotham-book.svg#GothamBook') format('svg');
+}
+@font-face {
+    font-family: 'GothamLight';
+    src: url('fonts/gotham-light.eot');
+    src: url('fonts/gotham-light.eot') format('embedded-opentype'),
+         url('fonts/gotham-light.woff') format('woff'),
+         url('fonts/gotham-light.ttf') format('truetype'),
+         url('fonts/gotham-light.svg#GothamLight') format('svg');
+}
+@font-face {
+    font-family: 'UtopiaReg';
+    src: url('fonts/utopiastd-regular-webfont-webfont.eot');
+    src: url('fonts/utopiastd-regular-webfont-webfont.eot') format('embedded-opentype'),
+         url('fonts/utopiastd-regular-webfont-webfont.woff') format('woff'),
+         url('fonts/utopiastd-regular-webfont-webfont.ttf') format('truetype'),
+         url('fonts/utopiastd-regular-webfont-webfont.svg#GothamLight') format('svg');
+}
+
+// Mixin for adding the right font styles
+@mixin lffont($type:GothamBook, $size:emCalc(14px), $uppercase:uppercase) {
+  font-family: $type, "Helvetica", Helvetica, Arial, sans-serif;
+  text-transform: $uppercase;
+  font-size:$size;
+}
+
+
+
+table {
+    font-family: "GothamBook", Helvetica, Arial, sans-serif;
+    th {
+        text-align: left;
+    }
+    td, th {
+        padding:15px 20px !important;
+    }
+}
+
+//mobile table, relys on responsive-table.js
+@media only screen and (max-width: 640px) {
+  
+  table.responsive { margin-bottom: 0; }
+  
+  .pinned { position: absolute; left: 0; top: 0; background: #fff; width: 35%; overflow: hidden; overflow-x: scroll; border-right: 1px solid #ccc; border-left: 1px solid #ccc; }
+  .pinned table { border-right: none; border-left: none; width: 100%;  margin-bottom:0px}
+  .pinned table th, .pinned table td { padding:0px 3px !important; white-space: wrap; }
+  .pinned td:last-child { border-bottom: 0; }
+  
+  div.table-wrapper { position: relative; margin-bottom: 20px; overflow: hidden; border-right: 1px solid #ccc; }
+  div.table-wrapper div.scrollable { margin-left: 35%; }
+  div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }  
+  div.scrollable table {margin-bottom:0px;}
+  div.scrollable table td, div.scrollable table th { position: relative; white-space: wrap; overflow: hidden; }
+  div.scrollable table th:first-child, div.scrollable table td:first-child, div.scrollable table td:first-child, div.scrollable table.pinned td { display: none; } 
+}
+
+.bold {
+    font-family: "GothamBold", Helvetica, Arial, sans-serif;
+    font-weight:bold;
+}
+
+.highlighted-text {
+    color:$highlight-color !important;
+}
+
+.price, .amount {
+    color:$green-color;
+}
+
+.utility-head {
+    @include lffont("GothamMedium");
+    color:$darkergreyblue-color;
+}
+
+.highlighter-text {
+    display: inline-block;
+    background: $highlight-color;
+    font-size: emCalc(15px);
+    line-height: 1em;
+    padding:3px 5px;
+    transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    margin-bottom:2px;
+    span {
+        display: inline-block;
+        transform: skewX(20deg);
+        -o-transform: skewX(20deg);
+        -moz-transform: skewX(20deg);
+        -webkit-transform: skewX(20deg);
+    }
+    
+    clear:both;
+}
+
+.date {
+  @include lffont("GothamBook", emCalc(10px));
+}
+
+.byline {
+  @include lffont("GothamBook", emCalc(12px));
+}
+
+.alert-box {
+    position:absolute;
+    z-index:5;
+    padding:40px;
+    background-color: $white-color;
+    left:50%;
+    margin-left:-160px;
+    width:320px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+//complete take over of button background
+.button, button, .block-btn {
+    border-radius:3px !important;
+    background: $navyblue-color; /* Old browsers */
+    background: -moz-linear-gradient(top,  $navyblue-color-light 0%, $navyblue-color 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$navyblue-color-light), color-stop(100%,$navyblue-color)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $navyblue-color-light 0%,$navyblue-color 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $navyblue-color-light 0%,$navyblue-color 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $navyblue-color-light 0%,$navyblue-color 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom,  $navyblue-color-light 0%,$navyblue-color 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$navyblue-color-light', endColorstr='$navyblue-color',GradientType=0 ) !important; /* IE6-9 */
+}
+

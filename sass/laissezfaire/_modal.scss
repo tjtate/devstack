@@ -1,0 +1,32 @@
+.modal-bg-cover {
+	background:$black-color;
+	margin: auto;
+  	position: fixed;
+  	z-index: 1002;
+  	opacity:0.9;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  	display:none;
+}
+
+.modal-wrapper {
+	background:$white-color;
+	margin-top:-1000px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:auto;
+	width:60%;
+	height:60%;
+	padding:$column-gutter/2;
+  	position: fixed;
+  	z-index: 1003;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  	transition: $transition-time-long;
+	-webkit-transition: $transition-time-long;
+	.modal-close-btn {
+		float:right;
+		background:$black-color;
+		padding:10px;
+		cursor:pointer;
+		color:$white-color;
+	}
+}

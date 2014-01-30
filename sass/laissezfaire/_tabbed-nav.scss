@@ -1,0 +1,94 @@
+.tabbed-nav {
+	margin-bottom:$column-gutter;
+	padding-top:$column-gutter*1.4;
+	height:$column-gutter*1.4;
+	overflow:hidden;
+	position:relative;
+	transition: $transition-time;
+	-webkit-transition: $transition-time;
+	&.hovered {
+		height:auto;
+		transition: $transition-time;
+		-webkit-transition: $transition-time;
+	}
+	li {
+		float:left;
+		width:90%;
+		padding:$column-gutter/4 $column-gutter/2;
+		border-bottom:1px solid #e1e1e1;
+
+		&:hover {
+			background: lighten($lightgreyblue-color, 4%);
+		}
+		&.current-menu-item {
+			position:absolute;
+			border-right:1px solid #e1e1e1;
+			top:0px;
+			background: url(../images/down-arrow.png) no-repeat 98% 16px $white-color;
+			&:hover {
+				background: url(../images/down-arrow.png) no-repeat 98% 16px lighten($lightgreyblue-color, 4%);
+			}
+		}
+	}
+}
+
+@media #{$large} {
+	.tabbed-nav {
+		margin-bottom:0 !important;
+		padding-top:0 !important;
+		height:auto !important;
+		overflow:visible !important;
+		padding-bottom:$column-gutter/2;
+		ul {
+			margin:0px;
+		}
+		li {
+			width:auto !important;
+			padding:0 !important;
+			border-bottom:none !important;
+			margin:0 !important;
+			&:hover {
+				background:none;
+			}
+			a {
+				color:$darkergreyblue-color;
+				@include lffont("GothamMedium");
+				padding:12px 20px;
+				&:hover {
+					color:$lightblue-color;
+				}
+			}
+			&:first-child {
+				a {
+					padding:12px 20px 12px 0 !important;
+				}
+			}
+			&.current-menu-item {
+				position:relative;
+				background:none !important;
+				border-right:none !important;
+				a {
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+					color:$white-color;
+					background:$darkgreyblue-color;
+					&:first-child {
+						padding:12px 20px !important;
+					}
+				}
+				&:after {
+				   transition: $transition-time;
+				   -webkit-transition: $transition-time;
+				   content:"";
+				   display:block; /* reduce the damage in FF3.0 */
+				   bottom:3px;
+				   width:0;
+				   margin:0 auto;
+				   border-width:15px 15px 0;
+				   border-style:solid;
+				   border-color:$darkgreyblue-color transparent;
+				}
+			}
+		}
+	}
+}

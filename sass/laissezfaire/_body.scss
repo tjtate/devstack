@@ -1,0 +1,43 @@
+.main-content-block-wrapper {
+	padding-top:$column-gutter;
+	background:$lightgreyblue-color;
+	z-index:5;
+	min-height:800px;
+
+	.lfloginform {
+		background-color:$white-color;
+		padding:$column-gutter;
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		float:left;
+		width:100%;
+		@include lffont("GothamBook", emCalc(14px), none);
+		input[type="text"], input[type="password"] {
+			height:45px;
+			@include lffont("GothamBook", emCalc(24px), none);
+		}
+		input[type="submit"] {
+			float:left;
+		}
+		.lost-pwd {
+			float:left;
+			clear:both;
+		}
+
+	}
+}
+
+.intro h2 {
+	line-height: 1.2em;
+	@include lffont("UtopiaReg", emCalc(30px), none);
+}
+
+@media #{$medium} {
+
+}
+
+@media #{$large} {
+
+
+}

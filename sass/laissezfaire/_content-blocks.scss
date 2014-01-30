@@ -1,0 +1,115 @@
+.content-blocks {
+	margin-bottom:$column-gutter !important;
+	@include block-grid(1, $column-gutter); 
+	transition: $transition-time;
+	-webkit-transition: $transition-time;
+	opacity:1;
+	&.loading {
+		opacity:0.2;
+	}
+	//default styles
+	.content-block, .club-block {
+		overflow: hidden;
+		&:hover {
+			.block-image, a span img {
+				transition: $transition-time;
+				-webkit-transition: $transition-time;
+				opacity:0.8;
+			}
+		}
+		.block {
+			transition: $transition-time;
+			-webkit-transition: $transition-time;
+			&:hover {
+				transition: $transition-time;
+				-webkit-transition: $transition-time;
+				-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+				-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+			}
+			background:$white-color;
+		}
+		.block-image {
+			width:100%;
+			transition: $transition-time;
+			-webkit-transition: $transition-time;
+			opacity:1;
+		}
+		.inner {
+			padding:$column-gutter/2;
+			h3 {
+				@include lffont("GothamLight", emCalc(24px), none);
+				a {
+					color:$black-color;
+					transition: $transition-time;
+					-webkit-transition: $transition-time;
+					&:hover {
+						color:$lightblue-color;
+						transition: $transition-time;
+						-webkit-transition: $transition-time;
+					}
+				}
+			}
+			.block-excerpt {
+				p {
+					font-size:emCalc(14px);
+					margin-bottom:0px;
+				}
+			}
+		}
+		.block-author {
+			p {
+				@include lffont("GothamBook", emCalc(10px), uppercase);
+				color:$lightblue-color;
+			}
+		}
+		.block-meta {
+			padding:$column-gutter/3 $column-gutter/2;
+			background:$navyblue-color;
+			p {
+				@include lffont("GothamBook", emCalc(10px), uppercase);
+				color:$lightblue-color;
+				margin-bottom:0px;
+				a {
+					color:$white-color;
+					&:hover {
+						color:lighten($lightblue-color, 30%);
+					}
+				}
+				.icon-key {
+					float:right;
+				}
+			}
+		}
+	}
+
+	.blockquote-block {
+		blockquote {
+			@include lffont("UtopiaReg", emCalc(24px), none);
+			font-style: italic;
+			border:none;
+			padding:0;
+			line-height: 1.3em;
+		}
+	}
+	.openx-block {
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	}
+}
+
+@media #{$medium} {
+	.content-blocks {
+		margin-bottom:$column-gutter !important;
+		@include block-grid(2, $column-gutter); 
+	}
+}
+
+@media #{$large} {
+	.content-blocks {
+		margin-bottom:$column-gutter !important;
+		@include block-grid(3, $column-gutter); 
+	}
+}

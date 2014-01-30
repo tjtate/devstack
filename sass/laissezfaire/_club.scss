@@ -1,0 +1,290 @@
+.main-content-club-home {
+	padding:$column-gutter 0 $column-gutter 0;
+	.intro h2 {
+		margin-top:0;
+	}
+}
+
+.main-content-club {
+	padding:$column-gutter 0 $column-gutter 0;
+	background:$lightgreyblue-color;
+	z-index:5;
+	.club-home-columns {
+		list-style:none;
+		.club-home-column {
+			float:left;
+			padding-right:$column-gutter/2;
+			margin-bottom:$column-gutter;
+		}
+		h3.sub-title {
+			margin-bottom:$column-gutter/2;
+		}
+	}
+	.sorter {
+		margin-bottom: $column-gutter/2;
+	}
+}
+
+.byline {
+	@include lffont("GothamBook", emCalc(13px));
+	a {
+		color: $darkgreyblue-color;
+	}
+}
+
+.club-blocks {
+	list-style:none;
+	margin:0 $column-gutter/2 !important;
+}
+
+.club-block {
+	background:$white-color;
+	padding:$column-gutter/2;
+	border:$border-style;
+	margin-bottom: $column-gutter;
+	width:100%;
+	float:left;
+	img {
+		width:100%;
+		border:$border-style;
+	}
+	.title {
+		margin-top:$column-gutter/2;
+		margin-bottom:0;
+		@include lffont("GothamBook", emCalc(20px), none);
+		a {
+			color: $black-color;
+		}
+	}
+	.byline {
+		@include lffont("GothamBook", emCalc(13px));
+		a {
+			color: $darkgreyblue-color;
+		}
+	}
+	.price {
+		@include lffont("GothamMedium", emCalc(18px));
+		margin-bottom:0;
+	}
+	.whats-inside {
+		@include lffont("GothamBook", emCalc(14px));
+		color: $darkgreyblue-color;
+		margin-top: $column-gutter;
+
+
+	}
+	ul.whats-inside-list {
+		float:left;
+		width:90%;
+		margin-left:$column-gutter/2;
+		margin-bottom:0px;
+		li {
+			@include lffont("GothamBook", emCalc(12px), none);
+			margin-bottom:7px;
+			line-height: 14px;
+		}
+	}
+	.block-btn {
+		@include lffont("GothamMedium", emCalc(11px));
+		float:left;
+		background:$navyblue-color;
+		color:$white-color;
+		padding:9px 5px !important;
+		margin-right:5px;
+		line-height:1em;
+		margin-top:$column-gutter;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&.hero {
+
+		margin-bottom:$column-gutter;
+		padding-bottom:$column-gutter;
+		.hero-img {
+			width:100%;
+			float:left;
+			margin-top:$column-gutter*1.25;
+		}
+		.title {
+			margin-top:$column-gutter/4 !important;
+			@include lffont("GothamLight", emCalc(30px), none);
+		}
+		.inner {
+			float:left;
+			width:100%;
+			
+			.highlighter-text {
+				position:absolute;
+				top:$column-gutter/2;
+				left:$column-gutter;
+				text-transform: uppercase;
+			}
+			.description {
+				margin-top:$column-gutter/2;
+				p {
+					font-size: emCalc(14px);
+				}
+			}
+			.block-btn {
+				margin-top:0;
+				font-size: emCalc(12px);
+				margin-right:10px;
+				padding:10px 10px !important;
+			}
+		}
+	}
+}
+
+.shop-interstitial {
+	clear:both;
+	padding:0 auto $column-gutter auto;
+	text-align:center;
+	.inner {
+		
+		padding:$column-gutter/4;
+	}
+}
+
+.club-home-column {
+	a.grey {
+		width:100%; 
+		padding:15px; 
+		margin-top:15px;
+		background:$darkgreyblue-color;
+	}
+}
+
+@media #{$small} {
+	.club-blocks {
+		@include block-grid(1, $column-gutter);
+		margin:0!important;
+	}
+	.club-home-columns {
+		@include block-grid(1, $column-gutter);
+		margin:0!important;
+	}
+}
+
+@media #{$small-medium} {
+	.club-block {
+		margin-bottom: $column-gutter/4;
+		&.hero {
+			margin-bottom:$column-gutter;
+			.hero-img {
+				width:35%;
+				float:left;
+				margin-top: 0px;
+			}
+			.title {
+				margin-top:$column-gutter/5 !important;
+				@include lffont("GothamLight", emCalc(24px), none);
+			}
+			.inner {
+				float:left;
+				width:55%;
+				margin-left:$column-gutter;
+				.highlighter-text {
+					position:relative;
+					top:0px;
+					left:0px;
+					text-transform: uppercase;
+				}
+				.description {
+					margin-top:$column-gutter/2;
+					p {
+						font-size: emCalc(14px);
+					}
+				}
+				.block-btn {
+					margin-top:0;
+					font-size: emCalc(12px);
+					margin-right:10px;
+					padding:10px 10px !important;
+				}
+			}
+		}
+	}
+	.club-blocks {
+		.title {
+			@include lffont("GothamBook", emCalc(18px), none);
+		}
+		.block-btn {
+			@include lffont("GothamMedium", emCalc(12px));
+			width:100%;
+			margin-top:10px !important;
+		}
+		@include block-grid(2, $column-gutter);
+		margin:0!important;
+	}
+}
+
+@media #{$medium} {
+	.club-block {
+		&.hero {
+			.title {
+				@include lffont("GothamLight", emCalc(36px), none);
+			}
+		}
+	}
+	.club-blocks {
+		@include block-grid(3, $column-gutter);
+		margin:0!important;
+	}
+	.club-home-columns {
+		@include block-grid(2, $column-gutter); 
+		margin:0!important;
+
+	}
+	.club-home-column {
+		float:left !important;
+	}
+
+	
+}
+
+@media #{$medium-large} {
+	.club-block {
+		.title {
+			@include lffont("GothamBook", emCalc(20px), none);
+		}
+		.block-btn {
+			@include lffont("GothamMedium", emCalc(10px));
+			width:auto !important;
+			margin-top:$column-gutter/2 !important;
+		}
+		&.hero {
+			.hero-img {
+				width:30%;
+			}
+			.title {
+				@include lffont("GothamLight", emCalc(48px), none);
+			}
+			.inner {
+				width:60%;
+			}
+		}
+	}
+	.club-blocks {
+		@include block-grid(3, $column-gutter); 
+		margin:0!important;
+	}
+	.club-home-columns {
+		@include block-grid(3, $column-gutter); 
+		margin:0!important;
+
+	}
+}
+
+@media #{$large} {
+
+	.single-product .club-blocks {
+		@include block-grid(5, $column-gutter); 
+	}
+
+	.club-blocks {
+		@include block-grid(4, $column-gutter); 
+		margin:0!important;
+	}
+
+}
